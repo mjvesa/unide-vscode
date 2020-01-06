@@ -1,0 +1,41 @@
+{
+  "name": "unide",
+  "version": "0.3.0",
+  "description": "Universal visual designer for Vaadin and Vaadin Components",
+  "repository": "https://github.com/mjvesa/unide-src",
+  "icon": "public/images/unide_tiny.png",
+  "publisher": "mjvesa",
+  "main": "public/extension.js",
+  "bin": "./cli.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public",
+    "test": "jest"
+  },
+  "author": "Matti Vesa",
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.unide"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.unide",
+        "title": "Unide"
+      }
+    ]
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.32.0"
+  }
+}
